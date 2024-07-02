@@ -398,7 +398,7 @@
                 fetch(`https://api.litecat.xyz/zsr/chat/new?username=${encodeURIComponent(username)}&message=${encodeURIComponent(message)}`)
                     .then(response => response.text())
                     .then(result => {
-                        if (result === 'OK!') {
+                        if (result === "OK!") {
                             loadMessages(); // 重新加载留言
                             document.getElementById('username').value = '';
                             document.getElementById('message').value = '';
