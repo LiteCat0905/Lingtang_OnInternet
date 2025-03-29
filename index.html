@@ -370,7 +370,7 @@
         document.addEventListener("DOMContentLoaded", loadMessages);
 
         function loadMessages() {
-            fetch('https://api.litecat.xyz/zsr/chat')
+            fetch('https://api.litecat.dev/zsr/chat')
                 .then(response => response.json())
                 .then(data => {
                     const container = document.getElementById('message-container');
@@ -395,7 +395,7 @@
             const message = document.getElementById('message').value.trim();
 
             if (username && message) {
-                fetch(`https://api.litecat.xyz/zsr/chat/new?username=${encodeURIComponent(username)}&message=${encodeURIComponent(message)}`)
+                fetch(`https://api.litecat.dev/zsr/chat/new?username=${encodeURIComponent(username)}&message=${encodeURIComponent(message)}`)
                     .then(response => response.text())
                     .then(result => {
                        
